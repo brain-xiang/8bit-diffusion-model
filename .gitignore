@@ -1,0 +1,7 @@
+.venv/
+notebooks/checkpoints/*
+notebooks/logs/*
+notebooks/tuning_results/*
+*test.py
+*gpu_vs_cpu.py
+*weights/archived_models/
