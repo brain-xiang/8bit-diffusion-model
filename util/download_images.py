@@ -10,16 +10,16 @@ import numpy as np
 from pathlib import Path
 from PIL import Image
 
-current_path = Path("C:/Users/brain/My Drive (brain@roforco.com)/CodeInDocs/MyDiffusionModel/tests/data_visualization.py").resolve()
+workspace_path = Path.cwd()
 
 # Change the path to the images you want to download
-data = np.load(current_path.parent.parent / "generations" / "custom_modelV4.npy")
+data = np.load(workspace_path / "generations" / "custom_modelV4.npy")
 
 # Specify specific images to download (0 index), leave empty to download all images
 images_to_download = [89, 141, 149, 234, 317, 366, 665]
 
 # Change the path to the folder where you want to save the images
-save_path = current_path.parent.parent / "images"
+save_path = workspace_path / "images"
 OUTPUT_SIZE = 462 # square image
 PADDING = 50 # Padding width
 

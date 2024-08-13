@@ -9,11 +9,11 @@ import matplotlib.pyplot as plt
 from pathlib import Path
 from matplotlib.widgets import Button, TextBox
 
-current_path = Path("C:/Users/brain/My Drive (brain@roforco.com)/CodeInDocs/MyDiffusionModel/tests/data_visualization.py").resolve()
+workspace_path = Path.cwd()
 
 # Change the path to the model you want to visualize
-# data = np.load(current_path.parent.parent / "data" / "sprites_1788_16x16.npy")
-data = np.load(current_path.parent.parent / "generations" / "custom_modelV4.npy")
+# data = np.load(workspace_path / "data" / "sprites_1788_16x16.npy")
+data = np.load(workspace_path / "generations" / "1000_generations.npy")
 
 fig, axes = plt.subplots(8,8, figsize=(15,15))
 plt.subplots_adjust(bottom=0.1, hspace=0.4)
